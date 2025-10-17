@@ -16,7 +16,7 @@ const Card = ({ application, changeStatus }) => {
         <p>Время: {application.time}</p>
         <label>
           Статус:{" "}
-          <select onChange={(e) => changeStatus(e, application, e.target.value)}>
+          <select className={styles.select} onChange={(e) => changeStatus(e, application, e.target.value)}>
             <option value={application.status}>{application.status}</option>
             <option value="Принято в работу">Принято в работу</option>
             <option value="Выполнено">Выполнено</option>
